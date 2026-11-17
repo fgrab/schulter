@@ -209,8 +209,8 @@ ol.steps { margin: 0; padding-left: 20px; display: flex; flex-direction: column;
 .player .sk { max-height: 32vh; width: auto; align-self: center; }
 .pstage { display: flex; flex-direction: column; gap: 14px; }
 
-.done { text-align: center; align-items: center; justify-content: center; min-height: 70vh; }
-.done .big { font-family: var(--font-display); font-size: 48px; font-weight: 700; }
+.finish { text-align: center; align-items: center; justify-content: center; min-height: 70vh; }
+.finish .big { font-family: var(--font-display); font-size: 48px; font-weight: 700; }
 
 @media (prefers-reduced-motion: reduce) { .ring .bar { transition: none; } .rcard:active { transform: none; } }
 </style>
@@ -667,7 +667,7 @@ function renderPlayer() {
 }
 function renderDone() {
   const m = Math.floor(view.secs / 60), s = view.secs % 60;
-  app.innerHTML = `<div class="wrap done"><p class="eyebrow">Geschafft</p><p class="big">${m}:${String(s).padStart(2, "0")}</p>
+  app.innerHTML = `<div class="wrap finish"><p class="eyebrow">Geschafft</p><p class="big">${m}:${String(s).padStart(2, "0")}</p>
     <p class="muted">Minuten für Schultern und Nacken. Gut gemacht, Katja.</p>
     <button class="btn primary" data-act="home" style="flex:none">Zur Übersicht</button></div>`;
 }

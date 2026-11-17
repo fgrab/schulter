@@ -6,7 +6,7 @@ root = Path(__file__).parent
 out = root / "docs"
 out.mkdir(exist_ok=True)
 app = (root / "app.html").read_text(encoding="utf-8")
-VERSION = "1"
+VERSION = "2"
 
 head = """<!doctype html>
 <html lang="de">
